@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>İyi ki Doğdun</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Başlık -->
+  <div class="header">
+    <h1>İYİ Kİ DOĞDUN</h1>
+    <p>NİCE YILLARIMIZA</p>
+    
+    </div>
+  </div>
+
+  <!-- Takvim Paneli -->
+    <div class="calendar-phone">
+    <div class="calendar-screen" id="calendar"></div>
+    </div>
+
+<!-- Takvim Paneli -->
+
+<title>İki Butonlu Panel</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    position: relative;
+    background: #f5f5f5;
+  }
+  /* Alt ortadaki butonlar */
+  .bottom-buttons {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+  }
+  .bottom-buttons button {
+    padding: 15px 25px;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff4d6d;
+  }
+  /* Overlay ve paneller */
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 998;
+  }
+  .panel {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    max-width: 90%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    padding: 20px 30px;
+    z-index: 999;
+  }
+  .panel p {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 1em 0;
+  }
+  .closePanelBtn {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 20px;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="bottom-buttons">
+  <button id="openPanel1Btn">Abitin seni ne kadar çok seviyor?</button>
+  <button id="openPanel2Btn">Sana layık olmak?</button>
+</div>
+
+<div id="overlay"></div>
+
+<div id="panel1" class="panel">
+  <p>Nesrinim, balım, birtanem, aşktanem, hayatım, her şeyim, prensesim ❤️
+
+Bazen kendime soruyorum, bu kadar sevgiyi kalbimde nasıl taşıyorum diye. Sonra sen aklıma geliyorsun, gözlerin geliyor, gülüşün geliyor, o masum bakışların. O an anlıyorum ki seni sevmek bir yük değil, bir mucize.
+
+Sana olan sevgim ne bir güne sığar ne bir cümleye. Ben seni her an daha çok seviyorum. Uykudan uyanır uyanmaz seni düşlüyorum, gün boyu zihnimde seninle yaşıyorum, geceleri ise seni kalbime sarıp uyuyorum.
+
+Sen benim huzurum, neşem, güvencem, en güzel yanım oldun. Varlığınla tamamlandım. Sana bakınca hayatın tüm güzelliklerini bir arada görüyorum. Çünkü sen benim gözümde her şeyin en güzeli, en özeli.
+
+Sana ne kadar çok sevdiğimi anlatmak istesem, harfler yetmez. Ama bil ki içimde her geçen gün büyüyen bir sevda var. Ve bu sevda seni ömrümün sonuna kadar seveceğime söz veriyor ❤️
+
+Seninle bir ömür değil, bir sonsuzluk istiyorum. Yanımda olman, elimi tutman, gözlerimin içine o sevgiyle bakman benim en büyük mutluluğum.
+
+Sen varsın ya, dünya güzel bir yer. Ve ben sadece sana aitim. Kalbimle, ruhumla, her şeyimle.
+
+Seni sana anlatmaya, sana olan sevgimi tarif etmeye çalışmak kelimelerle olacak bir iş değil. Hatta bunu düşünmek bile komik. Çünkü bazı sevgiler sadece hissedilir, anlatılamaz ❤️
+
+</p>
+  <button class="closePanelBtn" data-panel="panel1">Kapat</button>
+</div>
+
+<div id="panel2" class="panel">
+  <p>Nesrinim, balım, birtanem, aşktanem, hayatım, her şeyim, prensesim,
+
+Her gün kendime hatırlatıyorum; senin gibi birini sevmek, yanında olmak, seninle bir hayat kurmak ne büyük bir şans. Sana layık olabilmek için elimden gelenin en iyisini yapmaya çalışıyorum. Çünkü sen benim için sadece bir sevgili değil, hayatımın en değerli parçasısın.
+
+Her adımımda, her düşüncemde sen varsın. Daha iyi biri olmak, seni mutlu etmek, kalbini kırmamak için gece gündüz çalışıyorum. Biliyorum ki sana olan sevgim, sözlerimden çok daha fazlasını hak ediyor. O yüzden kelimeler bazen yetersiz kalıyor, ama hissettiklerim hep gerçek.
+
+Seninle olmak, senin sevgini kazanmak benim için en büyük gurur. Senin değerini bilmek, seni korumak, seninle büyümek istiyorum. Tüm kalbimle söz veriyorum, hayatımızı birlikte en güzel şekilde yazmak için elimden geleni yapacağım.
+
+Sen benim her şeyimsin ve sana layık olabilmek için asla durmayacağım.</p>
+  <button class="closePanelBtn" data-panel="panel2">Kapat</button>
+</div>
+
+<script>
+  const overlay = document.getElementById('overlay');
+  const panel1 = document.getElementById('panel1');
+  const panel2 = document.getElementById('panel2');
+  const openPanel1Btn = document.getElementById('openPanel1Btn');
+  const openPanel2Btn = document.getElementById('openPanel2Btn');
+  const closeButtons = document.querySelectorAll('.closePanelBtn');
+
+  // Açma fonksiyonu
+  function openPanel(panel) {
+    panel.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+  // Kapatma fonksiyonu
+  function closePanel(panel) {
+    panel.style.display = 'none';
+    overlay.style.display = 'none';
+  }
+
+  openPanel1Btn.addEventListener('click', () => {
+    // Panel 2 açıksa kapat, sonra 1 aç
+    if(panel2.style.display === 'block') closePanel(panel2);
+    if(panel1.style.display === 'block') {
+      closePanel(panel1);
+    } else {
+      openPanel(panel1);
+    }
+  });
+
+  openPanel2Btn.addEventListener('click', () => {
+    // Panel 1 açıksa kapat, sonra 2 aç
+    if(panel1.style.display === 'block') closePanel(panel1);
+    if(panel2.style.display === 'block') {
+      closePanel(panel2);
+    } else {
+      openPanel(panel2);
+    }
+  });
+
+  closeButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const panelId = e.target.getAttribute('data-panel');
+      closePanel(document.getElementById(panelId));
+    });
+  });
+
+  // Overlay tıklayınca açık olan panelleri kapat
+  overlay.addEventListener('click', () => {
+    if(panel1.style.display === 'block') closePanel(panel1);
+    if(panel2.style.display === 'block') closePanel(panel2);
+  });
+</script>
+
+
+  <!-- Telefon Çerçevesi -->
+  <div class="phone">
+    <img id="slideImage" src="images/1.jpg" alt="Anılarımız" />
+  </div>
+
+  <!-- Müzik Paneli -->
+  <div class="music-panel" id="musicPanel">
+    <button onclick="toggleMusicPanel()">🎵</button>
+    <div class="music-controls" id="musicControls">
+      <button onclick="prevTrack()">⏮️</button>
+      <button onclick="togglePlay()">⏯️</button>
+      <button onclick="nextTrack()">⏭️</button>
+    </div>
+  </div>
+
+<title>Zaman Hesaplayıcı</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    background: #fff0f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff4d6d;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff4d6d;
+    margin-bottom: 20px;
+  }
+  #result {
+    font-weight: bold;
+    color: #b30000;
+    font-size: 20px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<button id="calculateBtn">Geçen Süreyi Göster</button>
+<div id="result"></div>
+
+<script>
+  const calculateBtn = document.getElementById('calculateBtn');
+  const resultDiv = document.getElementById('result');
+
+  calculateBtn.addEventListener('click', () => {
+    // Başlangıç tarihi: 16 Mayıs 2024, 22:00
+    const startDate = new Date('2024-05-16T22:00:00');
+
+    // Şu anki tarih
+    const now = new Date();
+
+    // Farkı ms cinsinden al
+    const diffMs = now - startDate;
+
+    if(diffMs < 0) {
+      resultDiv.textContent = "16 Mayıs 2024 22:00 henüz gelmedi.";
+      return;
+    }
+
+    // Farkı dakika, saat, gün olarak hesapla
+    const diffMinutes = Math.floor(diffMs / (1000 * 60));
+    const days = Math.floor(diffMinutes / (60 * 24));
+    const hours = Math.floor((diffMinutes - (days * 24 * 60)) / 60);
+    const minutes = diffMinutes % 60;
+
+    resultDiv.textContent = `${days} gün, ${hours} saat, ${minutes} dakika geçti.`;
+  });
+</script>
+
+
+  <!-- Uçan Kalpler -->
+  <div id="hearts-container"></div>
+
+  <!-- Şifreli Mesaj -->
+  <div class="secret">
+    <button onclick="showPasswordPrompt()">💌 Özel Mesaj</button>
+    <div id="passwordPrompt" class="password-prompt">
+      <input type="password" id="passwordInput" placeholder="Şifre"/>
+      <button onclick="checkPassword()">Göster</button>
+    </div>
+    <div id="secretMessage" class="heart-popup" onclick="hideSecret()">
+      <span>❤️ Senin ağzını yerim 5 yıl sonra evlendik diye prive story patlar mı be aşk ❤️</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+
+<title>Alt Orta Buton ve Açılır Panel</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    position: relative;
+    background: #f5f5f5;
+  }
+  /* Alt ortadaki buton */
+  #openPanelBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff4d6d;
+    z-index: 1000;
+  }
+  /* Panel ve overlay */
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+  }
+  #panel {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    max-width: 90%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    padding: 20px 30px;
+    z-index: 1000;
+  }
+  #panel p {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 1em 0;
+  }
+  #closePanelBtn {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 20px;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<button id="openPanelBtn">Doğum Günün Bebeğim❤️‍🔥 </button>
+
+<div id="overlay"></div>
+
+<div id="panel">
+  <p>Bugün bizim için çok özel bir gün. Hem senin doğum günün hem de tam 1 yıldır hayatımda olduğun, birlikte yürüdüğümüz o güzel yolculuğun başlangıç yıldönümü. Sana nasıl teşekkür etsem, hangi kelimelerle sevgimi anlatsam bilmiyorum. Hayatıma girdiğin o ilk günden beri her şey daha renkli, daha anlamlı ve daha huzurlu. Senin gülüşünle sabahlarım aydınlanıyor, sesinle günüm güzelleşiyor. Varlığın bana güven veriyor, kalbime dokunduğun her an içimi sımsıcak bir sevgi sarıyor ❤. Bazen sadece yanımda olman bile yetiyor iyi hissetmeme. Seninle geçirdiğim her dakika, her an, benim için bir ömre bedel. Birlikte güldük, birlikte sustuk, birlikte büyüdük. Seninle bir yıl geçmiş ama sanki bir ömür gibi dolu dolu, anlamlı ve gerçekti. Seninle nice senelere ulaşmak, hayalini kurduğumuz o geleceği adım adım inşa etmek istiyorum. Doğum günün kutlu olsun aşkım, iyi ki doğdun, iyi ki varsın, iyi ki benimlesin ❤. Seni her şeyden çok seviyorum.
+
+Seninle geçirdiğim bu bir yıl, bana gerçek sevgiyi, sadakati ve huzuru öğretti. Her tartışmamızda bile daha çok bağlandım sana, her gülüşünde bir kez daha âşık oldum. Bana gösterdiğin sabır, verdiğin sevgi, kurduğun o güvenli alan için sonsuz teşekkür ederim. Seninle geçirdiğim zamanlarda kendimi daha çok tanıdım, seninle birlikte kendimi de sevmeyi öğrendim. Kalbimin en derin yerinde taşıyorum seni, öyle bir yer ki kimse dokunamaz, kimse silemez. Hayat bazen zor, bazen yorucu, ama sen yanımdayken her şey kolay geliyor 🍯. Omzuna yaslandığımda dünyanın tüm yükü hafifliyor, gözlerinin içine baktığımda geleceği görüyorum. Ve inan bana, seninle kurduğum hayallerin bir tanesinden bile vazgeçmeye hiç niyetim yok. Ne yaşarsak yaşayalım, ben hep senin yanında olacağım; elini tuttuğum ilk gün verdiğim sözü tutacağım: seni hep seveceğim, koruyacağım, destekleyeceğim ❤.
+
+</p>
+  <p>Seni nefes aldığım sürece seveceğime and içerim! 🫀 </p>
+  <button id="closePanelBtn">Kapat</button>
+</div>
+
+<script>
+  const openBtn = document.getElementById('openPanelBtn');
+  const closeBtn = document.getElementById('closePanelBtn');
+  const overlay = document.getElementById('overlay');
+  const panel = document.getElementById('panel');
+
+  function openPanel() {
+    panel.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+
+  function closePanel() {
+    panel.style.display = 'none';
+    overlay.style.display = 'none';
+  }
+
+  openBtn.addEventListener('click', () => {
+    openPanel();
+  });
+
+  closeBtn.addEventListener('click', () => {
+    closePanel();
+  });
+
+  overlay.addEventListener('click', () => {
+    closePanel();
+  });
+</script>
+
+</body>
+</html>

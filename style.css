@@ -1,0 +1,233 @@
+/* Tam ekran ve tam kaplama arka plan resmi */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('images/arka-plan.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #b14179; /* Resim yüklenmezse bu renk gözükür */
+  font-family: Arial, 'Times New Roman', Times, serif;
+  color: white;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1.5rem;
+}
+
+.buttons {
+  margin-top: 1rem;
+}
+
+button {
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ff85c1;
+}
+
+/* Telefon çerçevesi */
+.phone {
+  position: absolute;
+  left: 2rem;
+  top: 10rem;
+  width: 250px;
+  height: 500px;
+  border: 10px solid #ff69b4;
+  border-radius: 40px;
+  background-color: black;
+  overflow: hidden;
+}
+
+.phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Müzik Paneli */
+.music-panel {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.music-controls {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.music-controls button {
+  margin: 0 0.5rem;
+}
+
+/* Uçan Kalpler */
+.heart {
+  position: absolute;
+  color: pink;
+  font-size: 1.2rem;
+  animation: floatUp 6s linear infinite;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+/* Şifreli Mesaj */
+.secret {
+  position: fixed;
+  bottom: 2rem;
+  left: 1rem;
+}
+
+.password-prompt {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.password-prompt input {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+}
+
+
+
+.heart {
+  position: absolute;
+  background-color: #ff69b4;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: floatUp 6s linear infinite;
+  box-shadow: 0 0 8px #ff69b4aa;
+  text-align: center;
+  user-select: none;
+}
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1);}
+  100% { transform: scale(1); }
+}
+
+/* Telefon görünümü */
+.calendar-phone {
+  position: fixed;
+  right: 20px;
+  top: 10rem;
+  width: 250px;
+  height: 500px;
+  border: 14px solid #ff69b4;
+  border-radius: 30px;
+  background: #5e5e5e;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Takvim ekranı */
+.calendar-screen {
+  padding: 10px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.calendar-header {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.day {
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.today {
+  background-color: #ff69b4;
+  color: white;
+  font-weight: bold;
+}
+
+.sixteenth {
+  animation: glow 1s infinite alternate;
+  background: #ffe6f2;
+  color: #a31545;
+  font-weight: bold;
+}
+
+.may-16-special {
+  background: #ff1493 !important;
+  color: white !important;
+  animation: sparkle 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #ff69b4;
+  }
+  to {
+    box-shadow: 0 0 15px #ff69b4;
+  }
+}
+
+@keyframes sparkle {
+  from {
+    transform: scale(1);
+    box-shadow: 0 0 10px #ff1493, 0 0 20px #ff69b4;
+  }
+  to {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff69b4, 0 0 30px #ff1493;
+  }
+}
+
+
